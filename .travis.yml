@@ -2,8 +2,6 @@ sude: required
 services:
   - docker
 
-before_script: source env-vars.sh
-
 before_install:
   - docker build --file Dockerfile.dev --tag romka04/docker-react . 
 
@@ -14,7 +12,7 @@ deploy:
   provider: elasticbeanstalk
   access_key_id: AKIAV233ZI7IDAEQXXFX
   secret_access_key:
-    secure: $SECRET_ACCESS_KEY
+    secure: ${SECRET_ACCESS_KEY}
   region: "us-east-1"
   app: "docker-react"
   env: "Dockerreact-env"
