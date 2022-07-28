@@ -2,6 +2,8 @@ sude: required
 services:
   - docker
 
+before_script: source env-vars.sh
+
 before_install:
   - docker build --file Dockerfile.dev --tag romka04/docker-react . 
 
