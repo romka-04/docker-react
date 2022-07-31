@@ -17,7 +17,7 @@ function App() {
         >
           Learn React
         </a>
-        <h2>Hi there!</h2>
+        <h2>LEt's test how pull request works</h2>
       </header>
     </div>
   );
